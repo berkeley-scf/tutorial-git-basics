@@ -1,3 +1,3 @@
 all:
-	Rscript -e "library(knitr); knit2html('git-basic.md')"
-	rm git-basic.txt
+	Rscript -e "library(knitr); knit2html('git-intro.md')"
+	rm git-intro.txt
