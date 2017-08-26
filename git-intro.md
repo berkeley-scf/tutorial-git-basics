@@ -13,9 +13,12 @@ Introduction to Git
 > <http://statistics.berkeley.edu/computing/training/tutorials>
 >
 > In this tutorial, I will use a `$` prompt for bash. To follow along,
-> you will need to have bash and `git` installed on your computer. If
-> you are using the BCE VM, you should have everything you need
-> installed.
+> you will need to have bash and `git` installed on your computer. On Windows,
+> if you install Git for Windows you should get a `git bash`
+> environment in which you can run bash commands at the command line.
+> On a Mac, if you install Git for Mac, you should have git available at
+> the Mac terminal command line. If you are using the BCE VM, you should
+> have everything you need installed.
 >
 > If you don't have git installed, please see
 > [this](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -373,6 +376,15 @@ And now we can ask git what is different:
     $ git add file1.txt
     $ git commit -m "Great progress on this matter."
 
+Alternatively, if you are modifying files, you may just want to tell
+Git to include the changes to all files as part of the commit.
+
+    $ echo "Great progress ..." >> file1.txt
+    $ git commit -am "Great progress on this matter."
+
+This avoids having to do `git add` to indicate the files you have changed.
+Note that only changes to files already in the repository will be committed.
+
 While the basic pattern is *work, add, commit, and repeat*, I tend to
 repeatedly add my work to the staging area before I finally commit it.
 This allows me to effectively keep saving my work, but only committing
@@ -413,6 +425,9 @@ command, which we will discuss below.
 
 ![Working tree, staging area, and repository. Credit: ProGit book, by
 Scott Chacon, CC License.](figs/git-index.png)
+
+Credit: ProGit book, by Scott Chacon, CC License.
+
 
 ### `git log` revisited
 
@@ -523,6 +538,8 @@ the master branch, you can continue with a unified line of development:
 point, you could safely delete the iss53 branch, which would result in
 removing the label iss53 pointing to commit C5. Credit: ProGit book, by
 Scott Chacon, CC License.](figs/mergeaftermath.png)
+
+Credit: ProGit book, by Scott Chacon, CC License.
 
 Let's now illustrate all of this with a concrete example. Let's get our
 bearings first:
