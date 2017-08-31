@@ -616,7 +616,7 @@ computer.
 
 We can now follow the instructions from the next page:
 
-    $ git remote add origin git@github.com:jarrodmillman/test.git
+    $ git remote add origin https://github.com/jarrodmillman/test
     $ git push -u origin master
 
 Let's see the remote situation again:
@@ -635,7 +635,7 @@ different directory...
 Here I clone my 'test' repository but with a different name, test2, to
 simulate a 2nd computer:
 
-    $ git clone git@github.com:jarrodmillman/test.git test2
+    $ git clone https://github.com/jarrodmillman/test test2
     $ cd test2
     $ pwd
     $ git remote -v
